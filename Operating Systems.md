@@ -433,7 +433,7 @@ Possible inefficiencies when OS attempts to lock and/or control resources:
 - Disadvantages: preloaded pages may never be used
 	- considerable wastage of resources
 
-###### Process Selection
+#### Process Selection
 During out of memory failure:
 - out_of_memory() is called
 	- select_bad_process() with a badness() function is used:
@@ -445,7 +445,7 @@ During out of memory failure:
 			- kill the least amount of processes
 			- means to elevate and kill user specified processes
 
-###### Page Replacement Algorithms
+#### Page Replacement Algorithms
 Similar to cache replacement policies
 - Optimal: swaps pages that will occur farthest in the future
 - NRU: Not recently used
@@ -489,10 +489,10 @@ Replacement Scope
 	- scalable and more consistent performance
 - Global scope is more efficient overall
 
-###### Copy on Write
+#### Copy on Write
 - virtual memory marked without allocating physical memory
 - a physical page allocated only on actual write-time
-###### Swapping
+#### Swapping
 - swapping can be a slow process
 - still better than a crashing system or killing processes
 - swappiness
@@ -501,7 +501,7 @@ Replacement Scope
 	- major page fault requires accessing disk
 	- minor page fault can be fixed by sharing pages already in memory
 
-###### Page table vs Inverted page table
+#### Page table vs Inverted page table
 - reduced space complexity
 - a hash map
 - fits in DRAM since it is proportional in size to DRAM
@@ -515,7 +515,7 @@ Heirarchical Page Tables
 - some data stored at higher levels, pointers to less frequently accessed data
 - similar to huffman coding and multi-byte code pages for non-european charsets
 
-###### Cache vs Translation Lookaside Buffer (TLB)
+#### Cache vs Translation Lookaside Buffer (TLB)
 Cache
 - a collection of duplicated data
 	- used when the cost reading data from cache is cheaper than the original location
@@ -526,7 +526,7 @@ TLB
 - has a fixed number of slots containing page table entries
 	- each entry maps a virtual address to a physical address
 
-###### RAM Disk for Windows
+#### RAM Disk for Windows
 - disk stored entirely in its memory
 	- faster than physical hard disks
 		- boost computer performance
@@ -539,7 +539,7 @@ TLB
 	- reduced wear-and-tear on disk
 - unused RAM as a high-performance alternative to slower HDD storage
 
-###### Memory Compression Process
+#### Memory Compression Process
 - High memory and CPU usage in Windows 10 and 11
 	- memory compression feature optimizes physical RAM consumption by compressing some pages
 	- process memory compression allows more processes to be retained in physical memory
@@ -549,7 +549,7 @@ TLB
 
 
 ## Files and I/O
-###### Inodes
+#### Inodes
 - index node
 - a specific piece of metadata on a given filesystem
 	- metadata describes aspects of a file
@@ -557,7 +557,7 @@ TLB
 	- each filesystem has its own set of inodes
 		- inode numbers may be reused but never by the same filesystem
 
-###### Unix/Linux files and filesystems
+#### Unix/Linux files and filesystems
 - everything is an inode
 - everything is a file
 	- a directory is just a special file
@@ -582,7 +582,7 @@ TLB
 	- copies are independent and indentical sets of data
 		- updating a file does not update other copies
 
-###### Journaling File System
+#### Journaling File System
 Each OS has its own particular file system
 - NTFS for Windows
 - APFS for MacOS
@@ -642,7 +642,7 @@ Triple Modular Redundancy
 - a majority voting system producing a single output
 - if one system fails, the other two can correct and mask the fault
 
-###### Devices
+#### Devices
 - Character Device 
 	- the driver communicates by sending and receiving single characters (bytes, octets)
 	- no buffering is performed
@@ -660,7 +660,7 @@ Triple Modular Redundancy
 	- transfer data directly to and from the disk
 
 ## Platforms
-###### Hypervisor
+#### Hypervisor
 - A hypervisor abstracts hardware to run an OS.
 	- type 1: lightweight OS on bare-metal
 	- type 2: software layer on an existing OS
@@ -675,7 +675,7 @@ Triple Modular Redundancy
 	- cloud computing -> accessibility, scalability, higher ROI
 	- outsources security, maintenance, sysadmin roles
 
-###### Container
+#### Container
 - a container abstracts an OS in order to run applications and their dependencies. 
 	- more like config files to run an individual application
 - more lightweight and portable than VMs
